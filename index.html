@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+    <body>
+        <div class=" converrtComponent form">
+            <div class="tab-content">
+				<div id="signup">
+				<h1>Currency Converter</h1> 
+					<form>
+						<div class="top-row">		
+								<h2>Type in amount and select currency:</h2>
+								<div class="field-wrap">      
+								<input type="text" id="fromValue" oninput = "calculateCurrency()" value="0.00"/>
+								</div>
+								<div class="field-wrap">
+								<select id="fromCurrency" onchange="onChangefromCurrency(this.value)">
+									<option value="CAD">CAD</option>
+									<option value="USD">USD</option>
+									<option value="EUR">EUR</option>
+								</select>
+								</div>
+						</div>
+						<div class="top-row">
+								<h2>Converted amount:</h2>
+								<div class="field-wrap"> 
+								<input type="text" id="toValue" value="0.00" disabled/>
+								</div> 
+								<div class="field-wrap"> 
+								<select id="toCurrency" onchange="onChangetoCurrency(this.value)">
+									<option value="CAD">CAD</option>
+									<option value="USD">USD</option>
+									<option value="EUR">EUR</option>
+								</select>
+								</div> 
+								
+						</div>
+
+						<div class="top-row">
+							<div class="field-wrap"> 
+								<p>
+                					<a href="https://www.google.ca/intl/en/googlefinance/disclaimer/">Disclaimer</a>
+            					</p>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div>   
+                </div>
+            </div>
+        </div>
+        <script src="js/currency.js"></script>
+    </body>
+</html>
